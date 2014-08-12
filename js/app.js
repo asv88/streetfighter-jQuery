@@ -22,16 +22,25 @@ $(document).ready(function() {
 			   //hides the hadouken when animation completes
                $(this).css('left', '-212px');
 			   //puts hadouken back to original css position
+			   $(this).closest('.main').find('.ryu').css('top', '-300px')	
 			})
+			
    	  //this function shows throwing position and animated gif weapon. Activated when holding the mouse click down.
   })
   .mouseup(function() {
     $('.ryu-throwing').hide();
     $('.ryu-ready').show();
-  });
+  })
   //Activated when mouse click is released.
   //Original .ryu-ready animation shown again
-  //semi-colon ends method chaining
+  //semi-colon ends method chaining 
+   .keydown(function () {
+     var e = $.Event("keydown",{keycode : 88}); //Create event of keydown // Character X with "keycode" property
+	 $('.ryu').trigger(e);
+	 $('ryu-cool').show();
+	 $('.ryu-ready').hide();
+    });
+	  
   function playHadouken () {
 	  //CREATES NEW FUNCTION FOR AUDIO
   $('#hadouken-sound')[0].volume = 0.5;
@@ -41,4 +50,6 @@ $(document).ready(function() {
   $('#hadouken-sound')[0].play();
   //plays it
 }
+  
+  
 });
