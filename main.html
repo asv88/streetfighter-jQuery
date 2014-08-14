@@ -12,19 +12,33 @@
 <body>
   <div class="main">
 		 <div class="ryu">
-      		<div class="ryu-still"></div>
-      		<div class="ryu-ready"></div>
-      		<div class="ryu-throwing"></div>
-            <div class="ryu-cool"></div>
+      		<div class="ryu-still ryu-action"></div>
+      		<div class="ryu-ready ryu-action"></div>
+      		<div class="ryu-throwing ryu-action"></div>
+            <div class="ryu-cool ryu-action"></div>
 		 </div>
          <div class="hadouken"></div>
-         <div class="Streetfighter"><img src="images/Street_Fighter_Logo.png" alt="Streetfighter Logo"></div>
-             <div class="Text"><p>Brought to you by...</p></div>
-             <div class="jQuery"><img src="images/524px-JQuery_logo.svg.png" alt="jQuery Logo"></div>
-              <div id="main_2">
-                 <aside class="instructions"><p>Click on the streetfighter to activate his weapon.</p></aside>
-                 <aside class="key-instruct"><p>Press "X" on the keyboard to reveal his "cool" pose</p></aside>
-             </div>    
+         <div class="text">
+         		<!--Contains Logos, intro, and instructions-->
+             <div class="Streetfighter">
+                	<img src="images/Street_Fighter_Logo.png" alt="Streetfighter Logo">
+             </div>
+             <div class="intro">
+             	<p>Brought to you by...</p>
+             </div>
+             <div class="jQuery">
+             		<img src="images/524px-JQuery_logo.svg.png" alt="jQuery Logo">
+              </div>
+              
+              <aside class="instructions">
+              	<p>Click on the streetfighter to activate his weapon.</p> 
+                <p>Press and hold "X" on the keyboard to reveal his "cool" pose.</p>
+              
+              </aside>
+
+          </div>  
+             <audio id="theme-song" src="sound/Two_Step.mp3"></audio>
+             <audio src="sound/Stoker.mp3" id="cool"></audio>
              <audio id="hadouken-sound" src="sound/hadouken.mp3">        
         </div>
     </body>
